@@ -1,0 +1,15 @@
+.sheet {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: calc(-1 * var(--shettHeight));
+  margin: auto;
+  transition: all 0.3s;
+
+  width: auto;
+  background: #ccc;
+  &.is-on {
+    bottom: 0;
+    transition: all 0.3s;
+  }
+}

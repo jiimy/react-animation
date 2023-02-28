@@ -1,0 +1,21 @@
+.snackbar-wrap {
+  position: fixed;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  bottom: 0;
+
+  gap: 10px;
+  padding-bottom: 10px;
+  .snackbar {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    border: 1px solid black;
+    transition: all 0.4s;
+    bottom: calc(var(--snackbar) * -1);
+    &.is-show {
+      bottom: 0px;
+    }
+  }
+}
