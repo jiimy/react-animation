@@ -4,6 +4,7 @@ import LoginForm from "../../components/loginForm/LoginForm";
 import Sheet from "../../components/sheet/Sheet";
 import SnackbarWrap from "../../components/snackbar/SnackbarWrap";
 import TimerProgress from "../../components/timerProgress/TimerProgress";
+import './ui.scss';
 import Toast from "../../components/toast/Toast";
 import ToastItem from "../../components/toast/ToastItem";
 import UtilToolkit from "../../components/utilToolkit/UtilToolkit";
@@ -50,7 +51,7 @@ const Ui = () => {
   };
 
   return (
-    <div>
+    <div className="ui-page">
       <h3>sheet</h3>
       <p>
         밑에서 위로 올라오는 레이아웃이며, 다양한 content가 들어갈 수 있습니다.
@@ -86,10 +87,12 @@ const Ui = () => {
       </button>
 
       <h3>ui 툴킷</h3>
-      <p>shfit + f1로 on</p>
-      <p>shift + f2로 off</p>
+      <p>
+        shfit + f1로 on <br />
+        shift + f2로 off
+      </p>
       <ul>
-        <li>[x] 글자 수정모드</li>
+        <li>글자 수정모드</li>
         <li>[x] 칼라 pinset </li>
       </ul>
 

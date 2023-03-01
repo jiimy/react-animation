@@ -74,11 +74,19 @@ const UtilToolkit = () => {
               <div className="list-style-none">
                 <div className="sub-title">
                   {/* <a href="#/component">- 컴포넌트 페이지</a> */}
-                  <a href="http://localhost:3000/#/component">
-                    - 컴포넌트 페이지
-                  </a>
-                  <a href="http://localhost:3000/#/popup">- 팝업 페이지</a>
                 </div>
+                <ul>
+                  <li>
+                    <a href="http://localhost:3000/#/component">
+                      - 컴포넌트 페이지
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://localhost:3000/#/popup">- 팝업 페이지</a>
+                  </li>
+                </ul>
+                <div className="sub-title">칼라 비교</div>
+                https://codepen.io/urosurosevic/pen/pagxYE
               </div>
             </div>
           </Draggable>
