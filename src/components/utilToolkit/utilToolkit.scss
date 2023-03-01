@@ -1,0 +1,11 @@
+.tool-kit {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  width: fit-content;
+  border: 1px solid black;
+  cursor: grab;
+  button {
+    cursor: pointer;
+  }
+}

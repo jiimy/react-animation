@@ -50,6 +50,7 @@ const TimerProgress = ({ open = false, timer = 1, count = 10 }) => {
         <div
           className="timer-progress-item"
           data-time={index + 1}
+          key={index}
         ></div>
       ))}
     </ProgressWrap>

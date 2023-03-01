@@ -6,6 +6,7 @@ import SnackbarWrap from "../../components/snackbar/SnackbarWrap";
 import TimerProgress from "../../components/timerProgress/TimerProgress";
 import Toast from "../../components/toast/Toast";
 import ToastItem from "../../components/toast/ToastItem";
+import UtilToolkit from "../../components/utilToolkit/UtilToolkit";
 
 const Ui = () => {
   const [toggleSheet, setTogglesheet] = useState(false);
@@ -84,6 +85,14 @@ const Ui = () => {
         timer progress 시작
       </button>
 
+      <h3>ui 툴킷</h3>
+      <p>shfit + f1로 on</p>
+      <p>shift + f2로 off</p>
+      <ul>
+        <li>[x] 글자 수정모드</li>
+        <li>[x] 칼라 pinset </li>
+      </ul>
+
       <hr />
       {/* 실제 컴포넌트들 */}
       <Sheet show={toggleSheet} sheetClose={sheetClose}>
@@ -91,6 +100,8 @@ const Ui = () => {
       </Sheet>
 
       <TimerProgress open={toggleProgress} />
+
+      <UtilToolkit />
     </div>
   );
 };
