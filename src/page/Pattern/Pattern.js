@@ -7,7 +7,7 @@ const Pattern = () => {
       <h2>패턴 설계에 대한 고민 연구</h2>
       <h3>
         참고 링크 :{" "}
-        <a href="https://fe-developers.kakaoent.com/2022/221110-ioc-pattern/">
+        <a target="_blank" href="https://fe-developers.kakaoent.com/2022/221110-ioc-pattern/">
           https://fe-developers.kakaoent.com/2022/221110-ioc-pattern/
         </a>{" "}
       </h3>

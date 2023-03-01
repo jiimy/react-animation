@@ -26,7 +26,7 @@ const UtilToolkit = () => {
     }
   };
 
-  useEffect(() => {
+  // useEffect(() => {
     window.addEventListener("keydown", keysPressed, false);
     window.addEventListener("keyup", keysReleased, false);
 
@@ -49,7 +49,7 @@ const UtilToolkit = () => {
     function keysReleased(e) {
       keys[e.keyCode] = false;
     }
-  }, []);
+  // }, []);
 
   // TODO: 편집모드 일시 body에 pointer-event none 넣기, 편집모드 창에 hover 시 body에 넣은 pointer-event none 제거
 
@@ -85,8 +85,24 @@ const UtilToolkit = () => {
                     <a href="http://localhost:3000/#/popup">- 팝업 페이지</a>
                   </li>
                 </ul>
-                <div className="sub-title">칼라 비교</div>
-                https://codepen.io/urosurosevic/pen/pagxYE
+                <h4>추가될 기능</h4>
+                <dl>
+                  <dt>
+                    <strong>칼라</strong>
+                  </dt>
+                  <dd>
+                    <p>
+                      화면에 보이는 부분을 스포이드로 찍어서 rgba값을
+                      알아내거나, rgba을 입력하고 uitoolki을 이동하여 색상 비교
+                      <br/>
+                      https://codepen.io/urosurosevic/pen/pagxYE
+                    </p>
+                  </dd>
+                  <dt>
+                    <strong>새로고침 버튼 넣기</strong>
+                  </dt>
+                  <dd>f5눌러서 새로고침이 귀찮을수있으니 버튼 넣어두기..</dd>
+                </dl>
               </div>
             </div>
           </Draggable>

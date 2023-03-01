@@ -52,7 +52,7 @@ const Ui = () => {
 
   return (
     <div className="ui-page">
-      <h3>sheet</h3>
+      <h3>sheet - 완료</h3>
       <p>
         밑에서 위로 올라오는 레이아웃이며, 다양한 content가 들어갈 수 있습니다.
       </p>
@@ -70,7 +70,7 @@ const Ui = () => {
         toast 열기
       </button>
 
-      <h3>snackbar</h3>
+      <h3>snackbar - 열닫기만 가능</h3>
       <p>위나 아래로부터 나오고, '자동이거나 수동으로 없어집니다'</p>
       <SnackbarWrap />
 
@@ -80,7 +80,7 @@ const Ui = () => {
       <button>motionlayer 열기</button>
       <button>motionlayer 닫기</button>
 
-      <h3>타이머 프로그레스</h3>
+      <h3>타이머 프로그레스 - 완료</h3>
       <p>시작, 종료를 가진 타이머처럼 진행되는 프로그레스</p>
       <button onClick={() => clickToggleProgress(true)}>
         timer progress 시작
