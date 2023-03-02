@@ -12,6 +12,7 @@ const Etc = () => {
     }
   }
 
+  // 상태를 현재 컴포넌트가 아닌 다른곳에서 사용하고 싶을때
   const [number, dispatch] = useReducer(reducer, 0);
 
   const onIncrease = () => {
