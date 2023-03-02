@@ -1,4 +1,5 @@
 import { Route, Link, Routes } from "react-router-dom";
+import Etc from "./page/Etc/Etc";
 // import "./assets/index.scss";
 import HookForm from "./page/HookForm/HookForm";
 import Pattern from "./page/Pattern/Pattern";
@@ -19,11 +20,15 @@ function App() {
       <p>
         <Link to="/pattern">설계 패턴</Link>
       </p>
+      <p>
+        <Link to="/etc">etc</Link>
+      </p>
 
       <Routes>
         <Route path="/ui" element={<Ui />} />
         <Route path="/react-hook-form" element={<HookForm />} />
         <Route path="/pattern" element={<Pattern />} />
+        <Route path="/etc" element={<Etc />} />
       </Routes>
     </div>
   );
