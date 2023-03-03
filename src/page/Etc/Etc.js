@@ -1,4 +1,5 @@
-import React, { useReducer } from "react";
+import React, { useContext, useReducer } from "react";
+import { CountContext } from "../../context/Count";
 
 const Etc = () => {
   function reducer(state, action) {
@@ -14,7 +15,8 @@ const Etc = () => {
 
   // 상태를 현재 컴포넌트가 아닌 다른곳에서 사용하고 싶을때
   const [number, dispatch] = useReducer(reducer, 0);
-
+  const { numbers, plusCount } = useContext(CountContext);
+  
   const onIncrease = () => {
     dispatch({ type: "INCREMENT" });
   };
@@ -29,6 +31,9 @@ const Etc = () => {
       <button onClick={onIncrease}>+1</button>
       <button onClick={onDecrease}>-1</button>
       <div>{number}</div>
+      <h3>컨텍스트 테스트</h3>
+      <button onClick={plusCount}>+ 1</button>
+      <div>{numbers}</div>
     </div>
   );
 };
