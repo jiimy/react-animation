@@ -55,8 +55,9 @@ const UtilToolkit = () => {
 
   return (
     <div>
-      {(window.location.href.includes(":3000/") ||
-        window.location.href.includes("-dev")) &&
+      {
+        // (window.location.href.includes(":3000/") ||
+        // window.location.href.includes("-dev")) &&
         on === "on" && (
           <Draggable onDrag={(e, data) => trackPos(data)}>
             <div
