@@ -55,9 +55,6 @@ const UtilToolkit = () => {
 
   return (
     <div>
-      <div>
-        <button onClick={() => setOn(!on)}>테스트</button>
-      </div>
       {(window.location.href.includes(":3000/") ||
         window.location.href.includes("-dev")) &&
         on === "on" && (

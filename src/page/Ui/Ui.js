@@ -85,6 +85,7 @@ const Ui = () => {
       <button onClick={() => clickToggleProgress(true)}>
         timer progress 시작
       </button>
+      <TimerProgress open={toggleProgress} />
 
       <h3>ui 툴킷</h3>
       <p>
@@ -102,9 +103,9 @@ const Ui = () => {
         시트
       </Sheet>
 
-      <TimerProgress open={toggleProgress} />
-
       <UtilToolkit />
+      {/*
+     */}
     </div>
   );
 };
