@@ -26,30 +26,28 @@ const UtilToolkit = () => {
     }
   };
 
-  // useEffect(() => {
-    window.addEventListener("keydown", keysPressed, false);
-    window.addEventListener("keyup", keysReleased, false);
+  window.addEventListener("keydown", keysPressed, false);
+  window.addEventListener("keyup", keysReleased, false);
 
-    var keys = [];
+  var keys = [];
 
-    function keysPressed(e) {
-      keys[e.keyCode] = true;
-      if (keys[16] && keys[112]) {
-        console.log("Shift + F1");
-        e.preventDefault();
-        setOn("on");
-      }
-      if (keys[16] && keys[113]) {
-        console.log("Shift + f2");
-        e.preventDefault();
-        setOn("off");
-      }
+  function keysPressed(e) {
+    keys[e.keyCode] = true;
+    if (keys[16] && keys[112]) {
+      e.preventDefault();
+      console.log("Shift + F1");
+      setOn("on");
     }
-
-    function keysReleased(e) {
-      keys[e.keyCode] = false;
+    if (keys[16] && keys[113]) {
+      e.preventDefault();
+      console.log("Shift + f2");
+      setOn("off");
     }
-  // }, []);
+  }
+
+  function keysReleased(e) {
+    keys[e.keyCode] = false;
+  }
 
   // TODO: 편집모드 일시 body에 pointer-event none 넣기, 편집모드 창에 hover 시 body에 넣은 pointer-event none 제거
 
@@ -92,7 +90,7 @@ const UtilToolkit = () => {
                     <p>
                       화면에 보이는 부분을 스포이드로 찍어서 rgba값을
                       알아내거나, rgba을 입력하고 uitoolki을 이동하여 색상 비교
-                      <br/>
+                      <br />
                       https://codepen.io/urosurosevic/pen/pagxYE
                     </p>
                   </dd>
@@ -104,7 +102,8 @@ const UtilToolkit = () => {
               </div>
             </div>
           </Draggable>
-        )}
+        )
+      }
     </div>
   );
 };
