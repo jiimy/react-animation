@@ -4,10 +4,12 @@ import LoginForm from "../../components/loginForm/LoginForm";
 import Sheet from "../../components/sheet/Sheet";
 import SnackbarWrap from "../../components/snackbar/SnackbarWrap";
 import TimerProgress from "../../components/timerProgress/TimerProgress";
-import './ui.scss';
+import "./ui.scss";
 import Toast from "../../components/toast/Toast";
 import ToastItem from "../../components/toast/ToastItem";
 import UtilToolkit from "../../components/utilToolkit/UtilToolkit";
+import { Dialog } from "../../components/dialog/Dialog";
+import Counter from "../../components/numberInput/container/Counter";
 
 const Ui = () => {
   const [toggleSheet, setTogglesheet] = useState(false);
@@ -97,6 +99,19 @@ const Ui = () => {
         <li>[x] 칼라 pinset </li>
       </ul>
 
+      <h3>다이아로그 - 합성컴포넌트</h3>
+      <Dialog>
+        <Dialog.Title>타이틀</Dialog.Title>
+        <Dialog.Content>컨텐츠</Dialog.Content>
+      </Dialog>
+
+      <h3>number input - 합성컴포넌트</h3>
+      <Counter initValue={0} minimum={0} maximum={100}>
+        <Counter.Button type="decrement">-</Counter.Button>
+        <Counter.Status />
+        <Counter.Button type="increment">+</Counter.Button>
+      </Counter>
+      
       <hr />
       {/* 실제 컴포넌트들 */}
       <Sheet show={toggleSheet} sheetClose={sheetClose}>
@@ -105,7 +120,7 @@ const Ui = () => {
 
       <UtilToolkit />
       {/*
-     */}
+       */}
     </div>
   );
 };
