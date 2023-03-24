@@ -6,8 +6,9 @@ import "./utilToolkit.scss";
 const UtilToolkit = () => {
   const [editMode, setEditMode] = useState(false);
   const [position, setPosition] = useState({ x: 887, y: 946 });
+  const [throttle, setThrottle] = useState(false);
 
-  const [on, setOn] = useState("off");
+  const [on, setOn] = useState(false);
 
   const trackPos = (data) => {
     setPosition({ x: data.x, y: data.y });
@@ -35,13 +36,13 @@ const UtilToolkit = () => {
     keys[e.keyCode] = true;
     if (keys[16] && keys[112]) {
       e.preventDefault();
-      console.log("Shift + F1");
-      setOn("on");
+      // console.log("Shift + F1");
+      setOn(true);
     }
     if (keys[16] && keys[113]) {
       e.preventDefault();
-      console.log("Shift + f2");
-      setOn("off");
+      // console.log("Shift + f2");
+      setOn(false);
     }
   }
 
@@ -56,7 +57,7 @@ const UtilToolkit = () => {
       {
         // (window.location.href.includes(":3000/") ||
         // window.location.href.includes("-dev")) &&
-        on === "on" && (
+        on && (
           <Draggable onDrag={(e, data) => trackPos(data)}>
             <div
               className={classNames("tool-kit", { "is-none-event": editMode })}
