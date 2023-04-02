@@ -13,6 +13,7 @@ const Sheet = ({ show, children, sheetClose}) => {
     }
     setScreenSize();
     window.addEventListener('resize', () => setScreenSize());
+    return () => window.addEventListener("resize", () => setScreenSize());
   }, [childrenRef])
 
   useEffect(() => {
