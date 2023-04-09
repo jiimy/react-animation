@@ -99,13 +99,13 @@ const Ui = () => {
         <li>[x] 칼라 pinset </li>
       </ul>
 
-      <h3>다이아로그 - 합성컴포넌트</h3>
+      <h3>다이아로그 - 합성컴포넌트 - 렌더만 하는 경우</h3>
       <Dialog>
         <Dialog.Title>타이틀</Dialog.Title>
         <Dialog.Content>컨텐츠</Dialog.Content>
       </Dialog>
 
-      <h3>number input - 합성컴포넌트</h3>
+      <h3>number input - 합성컴포넌트 - 상태를 공유하는 경우</h3>
       <Counter initValue={0} minimum={0} maximum={100}>
         <Counter.Button type="decrement">-</Counter.Button>
         <Counter.Status />
