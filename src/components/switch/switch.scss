@@ -1,0 +1,46 @@
+@import 'assets/functions.scss';
+
+.switch {
+  input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    &:checked + label {
+      background: #bada55;
+      &:after {
+        left: calc(100% - 5px);
+        transform: translateX(-100%);
+      }
+    }
+    &:active:after {
+      width: 130px;
+    }
+  }
+  label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 200px;
+    height: 100px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    &:after {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 90px;
+      height: 90px;
+      background: #fff;
+      border-radius: 90px;
+      transition: 0.3s;
+      content: '';
+    }
+  }
+}
+
+// 어디서든 다크모드를 수정할수있음.
+@include global-theme() {
+  --text: white;
+  --background: #202b38;
+}

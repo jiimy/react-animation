@@ -1,7 +1,7 @@
 import React, { createContext, useReducer } from "react";
 import { Route, Link, Routes } from "react-router-dom";
 import Etc from "./page/Etc/Etc";
-// import "./assets/index.scss";
+
 import HookForm from "./page/HookForm/HookForm";
 import Pattern from "./page/Pattern/Pattern";
 import Ui from "./page/Ui/Ui";

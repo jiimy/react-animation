@@ -1,6 +1,7 @@
 import React, { useContext, useReducer } from "react";
 import { CountContext } from "../../context/Count";
 import ContainerQuery from "../../components/containerQuery/ContainerQuery";
+import Switch from "../../components/switch/Switch";
 
 const Etc = () => {
   function reducer(state, action) {
@@ -64,6 +65,10 @@ const Etc = () => {
       <ContainerQuery classname="content-container2" size={1200} style={style2}>
         내용2 size: 1200
       </ContainerQuery>
+
+      <h3>테마 스위치</h3>
+      <p>다크 테마의 컨트롤러를 하는 방식</p>
+      <Switch/>
     </div>
   );
 };
