@@ -2,6 +2,7 @@ import React, { useContext, useReducer, useState } from "react";
 import { CountContext } from "../../context/Count";
 import ContainerQuery from "../../components/containerQuery/ContainerQuery";
 import Switch from "../../components/switch/Switch";
+import Sample from "components/sample/Sample";
 // import './etc.scss';
 
 const Etc = () => {
@@ -78,6 +79,9 @@ const Etc = () => {
       <h3>테마 스위치</h3>
       <p>다크 테마의 컨트롤러를 하는 방식</p>
       <Switch />
+
+      <br />
+      <Sample />
     </div>
   );
 };
