@@ -10,6 +10,7 @@ import ToastItem from "../../components/toast/ToastItem";
 import UtilToolkit from "../../components/utilToolkit/UtilToolkit";
 import { Dialog } from "../../components/dialog/Dialog";
 import Counter from "../../components/numberInput/container/Counter";
+import Button from "components/button/Button";
 
 const Ui = () => {
   const [toggleSheet, setTogglesheet] = useState(false);
@@ -54,6 +55,9 @@ const Ui = () => {
 
   return (
     <div className="ui-page">
+      <h3>vac 테스트</h3>
+      button <hr/>
+      <Button>버튼</Button>
       <h3>sheet - 완료</h3>
       <p>
         밑에서 위로 올라오는 레이아웃이며, 다양한 content가 들어갈 수 있습니다.
