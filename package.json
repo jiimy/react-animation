@@ -20,6 +20,7 @@
     "recoil": "^0.7.6",
     "redux": "^4.2.1",
     "sass": "^1.58.3",
+    "snow-white-ui": "^0.0.38",
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
   },

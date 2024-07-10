@@ -57,7 +57,8 @@ const Ui = () => {
     <div className="ui-page">
       <h3>vac 테스트</h3>
       button <hr/>
-      <Button>버튼</Button>
+      스노우 화이트 버튼 <hr/>
+        <Button>버튼</Button>
       <h3>sheet - 완료</h3>
       <p>
         밑에서 위로 올라오는 레이아웃이며, 다양한 content가 들어갈 수 있습니다.
@@ -91,7 +92,7 @@ const Ui = () => {
       <button onClick={() => clickToggleProgress(true)}>
         timer progress 시작
       </button>
-      <TimerProgress open={toggleProgress} />
+      <TimerProgress open={toggleProgress} count={20} timer={10}/>
 
       <h3>ui 툴킷</h3>
       <p>
