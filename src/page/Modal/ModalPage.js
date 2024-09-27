@@ -1,8 +1,6 @@
 import Anchor from "components/popover/Anchor";
 import Popover1 from "components/popover/Popover1";
-import Popover from "components/popover/Popover1";
 import Popover2 from "components/popover/Popover2";
-import Popover3 from "components/popover/Popover3";
 import BasicModal from "components/portalModal/basicmodal/BasicModal";
 import { useState } from "react";
 
@@ -30,7 +28,6 @@ const ModalPage = () => {
         <hr />
         https://frontendmasters.com/blog/drawing-a-line-to-connect-elements-with-css-anchor-positioning/
         <hr />
-        {/* <Popover3 /> */}
         <Anchor/>
         <button
           onClick={() => setModal1(true)}
