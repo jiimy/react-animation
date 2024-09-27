@@ -1,0 +1,43 @@
+/* The demo */
+.anchor-btn {
+  anchor-name: --question-mark;
+}
+
+#my-tooltip {
+  inset: auto;
+  position-anchor: --question-mark;
+  /*  Position bottom of anchored elem at top of anchor  */
+  left: anchor(right);
+  /*  If no space on left, swap to the right  */
+  position-try-fallbacks: flip-inline;
+  /*  Centering  */
+  align-self: anchor-center;
+  /*  set max height of the tooltip to 2x height of the anchor  */
+  max-height: calc(anchor-size(block) * 2);
+  max-width: 300px;
+  border: 1px solid black;
+}
+
+/* Misc styling */
+
+.anchor-btn {
+  background: #ddd;
+  font-size: 1rem;
+  font-weight: 800;
+  font-family: monospace;
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+  width: 1.5rem;
+  line-height: 0;
+  border: 2px solid black;
+  width: 2rem;
+}
+
+.tooltip {
+  font-family: system-ui, sans-serif;
+  background: #333;
+  color: white;
+  font-weight: 400;
+  padding: 1rem;
+  line-height: 1.5;
+}

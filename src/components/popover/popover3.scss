@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@600&display=swap');
+
+:root {
+  --btn-size: 3rem;
+  --extra-space: 1.5rem;
+}
+
+/* Where the magic happens */
+.item {
+  --radius: calc(var(--btn-size) + var(--extra-space));
+  background-color: var(--bg);
+  transform: translateX(calc(cos(var(--angle)) * var(--radius)))
+		         translateY(calc(sin(var(--angle) * -1) * var(--radius)))
+             rotate(0deg);
+  opacity: 0;
+  transition: all 0.3s var(--delay) ease;
+}
+
+/* Adding for popover base */
+
+.menu-items:not(:popover-open) .item {
+  --radius: 0;
+  --angle: 0;
+  rotate: 45deg;
+}
+
+/* rotate the "plus" */
+.menu-toggle > div {
+  transition: transform 0.3s;
+}
+
+.menu:has(:popover-open) .menu-toggle > div {
+  transform: rotate(45deg);
+}
+
+.menu-items {
+  bottom: calc(anchor(bottom));
+  left: anchor(center);
+  translate: -50% 0;
+  /*  popover override  */
+  background: none;
+
+   position-anchor: --anchor-el;
+}
+
+.hidden-close {
+  transform: rotate(45deg);
+  transition: opacity 0.1s;
+  transition-delay: 1s;
+  width: var(--btn-size);
+  aspect-ratio: 1;
+}
+
+:popover-open .item {
+  opacity: 1;
+}
+
+/* Every item gets a background, angle, and delay */
+/* This gets updated when the popover is open */
+
+.item:nth-child(1) {
+  --bg: pink;
+  --angle: 0deg;
+  --delay: 0s;
+}
+
+.item:nth-child(2) {
+  --bg: thistle;
+  --angle: 45deg;
+  --delay: 0.1s;
+}
+
+.item:nth-child(3) {
+  --bg:	paleturquoise;
+  --angle: 90deg;
+  --delay: 0.2s;
+}
+
+.item:nth-child(4) {
+  --bg: lightgreen;
+  --angle: 135deg;
+  --delay: 0.3s;
+}
+
+.item:nth-child(5) {
+  --bg: peachpuff;
+  --angle: 180deg;
+  --delay: 0.4s;
+}
+
+/* Not related to demmo, just styling */
+
+.item {
+  border-radius: 50%;
+  width: var(--btn-size);
+  aspect-ratio: 1;
+}
+
+.menu-toggle {
+  border-radius: 50%;
+  width: var(--btn-size);
+  aspect-ratio: 1;
+  background: darksalmon;
+  z-index: 1;
+  anchor-name: --anchor-el; // 추가됨
+}
+
+/* Grid piles */
+
+.menu,
+.menu-items,
+body,
+.item {
+  display: grid;
+  place-content: center;
+}
+
+.menu > *,
+.menu-items > *,
+body > *
+.item button {
+  grid-area: 1/1;
+}
+
+/* Resets, etc. */
+/* visually-hidden ala https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html */
+
+button:focus-visible {
+  outline: 2px dashed deeppink;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.menu, .menu-items {
+  overflow: unset;
+}
