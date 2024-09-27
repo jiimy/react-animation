@@ -26,7 +26,7 @@ const ModalPage = () => {
         닫지 마세요. 빛을 닫지 않습니다. 전환 또는 닫기 작업을 사용하여 광고
         소재를 닫습니다.
         <hr />
-        https://frontendmasters.com/blog/drawing-a-line-to-connect-elements-with-css-anchor-positioning/
+        {/* https://frontendmasters.com/blog/drawing-a-line-to-connect-elements-with-css-anchor-positioning/ */}
         <hr />
         <Anchor/>
         <button
