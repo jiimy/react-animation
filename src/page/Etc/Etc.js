@@ -3,6 +3,8 @@ import { CountContext } from "../../context/Count";
 import ContainerQuery from "../../components/containerQuery/ContainerQuery";
 import Switch from "../../components/switch/Switch";
 import Sample from "components/sample/Sample";
+import {Button} from 'snow-white-ui';
+import TextArea from "components/textarea/TextArea";
 // import './etc.scss';
 
 const Etc = () => {
@@ -41,7 +43,12 @@ const Etc = () => {
   };
   return (
     <div>
+      <Button>스노우화이트 버튼</Button>
       <h2>잡다한 기능 테스트 페이지</h2>
+      <h3>
+      textarea 자동 높이 ios 테스트
+      </h3>
+      <TextArea/>
       <h3>리듀서 테스트</h3>
       <button onClick={onIncrease}>+1</button>
       <button onClick={onDecrease}>-1</button>
